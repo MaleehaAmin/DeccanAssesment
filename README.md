@@ -3,7 +3,6 @@
 The dataset used is the California Housing Dataset from Scikit-learn, which is based on the 1990 U.S. Census data. It provides information about housing prices in different districts of California.
 
 The dataset consists of various features:
-
 MedInc represents the median income of households in the block group, measured in tens of thousands of dollars.
 HouseAge indicates the median age of houses in the block group.
 AveRooms is the average number of rooms per household.
@@ -20,7 +19,7 @@ The dataset was first examined for missing values, and none were found. Feature 
 Feature Engineering
 Unnecessary features, specifically Latitude and Longitude, were removed as they did not significantly improve predictions. All numerical features were scaled using StandardScaler to ensure a uniform distribution. Feature selection was performed by analyzing correlations and feature importance scores.
 
-3. Model Selection & Performance Evaluation
+4. Model Selection & Performance Evaluation
 Four regression models were trained: Linear Regression, Decision Tree, Random Forest, and XGBoost. The models were evaluated using Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and R² score to measure their predictive performance.
 
 Random Forest achieved the best performance with an R² score of 0.6775, making it the most suitable model for deployment. XGBoost performed similarly but was slightly less interpretable.
@@ -54,6 +53,7 @@ $body = @{
 
 $response = Invoke-WebRequest -Uri "http://127.0.0.1:8000/predict" -Method Post -Headers $headers -Body $body
 Write-Host $response.Content
+
 
 5. Frontend Interface
 A simple web UI was developed using HTML, CSS, and JavaScript to allow users to input house features and get predictions. The interface includes a form with input fields for each feature and a "Predict Price" button to fetch results from the API. The response is displayed dynamically on the page.
