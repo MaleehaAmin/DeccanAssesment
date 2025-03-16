@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>House Price Prediction</h2>
+        <form id="prediction-form">
+            <label>MedInc: <input type="number" step="0.01" id="MedInc" required></label>
+            <label>HouseAge: <input type="number" step="0.01" id="HouseAge" required></label>
+            <label>AveRooms: <input type="number" step="0.01" id="AveRooms" required></label>
+            <label>AveBedrms: <input type="number" step="0.01" id="AveBedrms" required></label>
+            <label>Population: <input type="number" id="Population" required></label>
+            <label>AveOccup: <input type="number" step="0.01" id="AveOccup" required></label>
+            <button type="submit">Predict Price</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
